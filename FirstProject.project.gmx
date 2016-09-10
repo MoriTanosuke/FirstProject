@@ -31,6 +31,7 @@
     <object>objects\obj_wall1</object>
     <object>objects\obj_Coin</object>
     <object>objects\obj_Scoreboard</object>
+    <object>objects\obj_Enemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmLevel1</room>
