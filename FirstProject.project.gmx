@@ -13,14 +13,19 @@
     <sprite>sprites\spr_Player_down</sprite>
     <sprite>sprites\spr_Player_right</sprite>
     <sprite>sprites\spr_Player_left</sprite>
+    <sprite>sprites\spr_Player_shadow</sprite>
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\spr_Coin</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
-    <background>background\background2</background>
+    <background>background\bg_grass</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_get_input.gml</script>
+    <script>scripts\scr_move_state.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_Player1</object>
     <object>objects\obj_wall1</object>

@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>/// Initialize game state
 spd = 5;
+// get first input
+scr_get_input();
+// set the current state of the player
+state = scr_move_state
 </string>
           </argument>
         </arguments>
@@ -50,37 +54,10 @@ spd = 5;
           <argument>
             <kind>1</kind>
             <string>/// Move the player
-var right_key = keyboard_check(ord('D'));
-var left_key = keyboard_check(ord('A'))
-var down_key = keyboard_check(ord('S'));
-var up_key = keyboard_check(ord('W'));
-var no_key = !right_key and !left_key and !down_key and !up_key;
-
-// right
-if(right_key) {
-  x += spd;
-  sprite_index = spr_Player_right;
-}
-// left
-if(left_key) {
-  x -= spd;
-  sprite_index = spr_Player_left;
-}
-// down
-if(down_key) {
-  y += spd;
-  sprite_index = spr_Player_down;
-}
-// up
-if(up_key) {
-  y -= spd;
-  sprite_index = spr_Player_up;
-}
-
-if(no_key) {
-  sprite_index = spr_Player1;
-}
-
+// get the current input
+scr_get_input();
+// execute the script associated with the current state of the player
+script_execute(state);
 </string>
           </argument>
         </arguments>
@@ -168,6 +145,31 @@ if(no_key) {
           <argument>
             <kind>0</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw the shadow
+draw_sprite(spr_Player_shadow, 0, x, y + 5);
+draw_self();
+</string>
           </argument>
         </arguments>
       </action>
